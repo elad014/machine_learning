@@ -16,18 +16,18 @@ This project performs comprehensive hyperparameter tuning on three different mac
 
 **Grid Size:** 7 × 7 × 3 × 2 = **294 combinations**
 
-BEST RESOLTS
-**max_depth:** 3
-**min_samples_split:** 4
-**criterion:** entropy
-**splitter:** best
+**BEST RESULTS:**
+- **max_depth:** 3
+- **min_samples_split:** 4
+- **criterion:** entropy
+- **splitter:** best
 
-BEST METRICS:
-**accuracy:** 0.9734
-**precision:** 0.9677
-**recall:** 0.9917
-**f1_score:** 0.9796
-**average:** 0.9781
+**BEST METRICS:**
+- **accuracy:** 0.9734
+- **precision:** 0.9677
+- **recall:** 0.9917
+- **f1_score:** 0.9796
+- **average:** 0.9781
 
 
 ### 2. Random Forest Classifier
@@ -41,19 +41,18 @@ BEST METRICS:
 
 **Grid Size:** 5 × 7 × 7 × 2 = **490 combinations**
 
-BEST RESOLTS:
+**BEST RESULTS:**
+- **n_estimators:** 10
+- **max_depth:** 100
+- **min_samples_split:** 25
+- **criterion:** entropy
 
-**n_estimators:** 10
-**max_depth:** 100
-**min_samples_split:** 25
-**criterion:** entropy
-
-BEST METRICS:
-**accuracy:** 0.9787
-**precision:** 0.9756
-**recall:** 0.9917
-**f1_score:** 0.9836
-**average:** 0.9824
+**BEST METRICS:**
+- **accuracy:** 0.9787
+- **precision:** 0.9756
+- **recall:** 0.9917
+- **f1_score:** 0.9836
+- **average:** 0.9824
 
 
 ### 3. AdaBoost Classifier
@@ -66,17 +65,26 @@ BEST METRICS:
 
 **Grid Size:** 7 × 6 × 5 = **210 combinations**
 
+**BEST RESULTS:**
+- **n_estimators:** 50
+- **learning_rate:** 1.5
+- **random_state:** 42
+
+**BEST METRICS:**
+- **accuracy:** 0.9840
+- **precision:** 0.9917
+- **recall:** 0.9835
+- **f1_score:** 0.9876
+- **average:** 0.9867
+
 ## Total Experiments
 **994 model runs** across all three algorithms
 
+## Timing Summary
 
-**n_estimators:** 50
-**learning_rate:** 1.5
-**random_state:** 42
-
-BEST METRICS:
-**accuracy:** 0.9840
-**precision:** 0.9917
-**recall:** 0.9835
-**f1_score:** 0.9876
-**average:** 0.9867
+| Model | Time (seconds) | Time (minutes) |
+|-------|----------------|----------------|
+| Decision Tree | 42.65s | 0.71 min |
+| Random Forest | 214.80s | 3.58 min |
+| AdaBoost | 100.11s | 1.67 min |
+| **TOTAL** | **361.33s** | **6.02 min** |
